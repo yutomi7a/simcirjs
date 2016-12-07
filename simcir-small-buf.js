@@ -12,7 +12,6 @@
 // includes following device types:
 //  SmallBUF
 
-'use strict';
 !function($, $s) {
 
   var unit = $s.unit;
