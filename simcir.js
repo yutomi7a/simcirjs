@@ -421,6 +421,15 @@ var simcir = function($) {
         });
       });
     };
+    device.$ui.on('dispose', function() {
+      $.each(getInputs(), function(i, inNode) {
+        inNode.$ui.remove();
+      });
+      $.each(getOutputs(), function(i, outNode) {
+        outNode.$ui.remove();
+      });
+      device.$ui.remove();
+    } );
 
     var selected = false;
     var setSelected = function(value) {
@@ -689,6 +698,7 @@ var simcir = function($) {
     };
     $dlg.on('mousedown', dlg_mouseDownHandler);
     $closeButton.on('mousedown', function() {
+      $dlg.trigger('close');
       $dlg.remove();
       dialogManager.remove($dlg);
     });
@@ -696,8 +706,8 @@ var simcir = function($) {
     var h = $dlg.height();
     var cw = $(window).width();
     var ch = $(window).height();
-    var x = (cw - w) / 2 + $(document).scrollLeft();
-    var y = (ch - h) / 2 + $(document).scrollTop();
+    var x = (cw - w) / 2 + $(document.body).scrollLeft();
+    var y = (ch - h) / 2 + $(document.body).scrollTop();
     var moveTo = function(x, y) {
       $dlg.css({left: x + 'px', top: y + 'px'});
     };
@@ -763,12 +773,19 @@ var simcir = function($) {
         var size = super_getSize();
         return {width: unit * 4, height: size.height};
       };
+      device.$ui.on('dispose', function() {
+        $.each($devs, function(i, $dev) {
+          $dev.trigger('dispose');
+        });
+      } );
       device.$ui.on('dblclick', function(event) {
         // open library,
         event.preventDefault();
         event.stopPropagation();
         showDialog(device.deviceDef.label || device.deviceDef.type,
-            setupSimcir($('<div></div>'), data) );
+            setupSimcir($('<div></div>'), data) ).on('close', function() {
+              $(this).find('.simcir-workspace').trigger('dispose');
+            });
       });
     };
   };
@@ -836,7 +853,7 @@ var simcir = function($) {
     var body_mouseDownHandler = function(event) {
       event.preventDefault();
       event.stopPropagation();
-      var off = $scrollbar.parents('svg').offset();
+      var off = $scrollbar.parent('svg').offset();
       var pos = transform($scrollbar);
       var y = event.pageY - off.top - pos.y;
       var barPos = transform($bar);
@@ -924,7 +941,13 @@ var simcir = function($) {
 
     var $workspace = createSVG(
         workspaceWidth, workspaceHeight).
-      attr('class', 'simcir-workspace');
+      attr('class', 'simcir-workspace').
+      on('dispose', function() {
+        $(this).find('.simcir-device').trigger('dispose');
+        $toolboxPane.remove();
+        $workspace.remove();
+      });
+
     disableSelection($workspace);
 
     var $defs = createSVGElement('defs');
@@ -997,7 +1020,7 @@ var simcir = function($) {
       $dev.trigger('deviceRemove');
       // before remove, disconnect all
       controller($dev).disconnectAll();
-      $dev.remove();
+      $dev.trigger('dispose');
       updateConnectors();
     };
 
@@ -1194,7 +1217,7 @@ var simcir = function($) {
           adjustDevice($dev);
           addDevice($dev);
         } else {
-          $dev.remove();
+          $dev.trigger('dispose');
         }
       };
     };
@@ -1351,7 +1374,17 @@ var simcir = function($) {
     return $workspace;
   };
 
+  var clearSimcir = function($placeHolder) {
+    $placeHolder = $($placeHolder[0]);
+    $placeHolder.find('.simcir-workspace').trigger('dispose');
+    $placeHolder.children().remove();
+    return $placeHolder;
+  };
+
   var setupSimcir = function($placeHolder, data) {
+
+    $placeHolder = clearSimcir($placeHolder);
+
     var $workspace = simcir.createWorkspace(data);
     var $dataArea = $('<textarea></textarea>').
       addClass('simcir-json-data-area').
@@ -1470,6 +1503,7 @@ var simcir = function($) {
 
   return {
     registerDevice: registerDevice,
+    clearSimcir: clearSimcir,
     setupSimcir: setupSimcir,
     createWorkspace: createWorkspace,
     createSVGElement: createSVGElement,

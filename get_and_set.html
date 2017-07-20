@@ -20,7 +20,6 @@ $(function() {
         $simcir.find('.simcir-workspace') ).text();
   };
   var setCircuitData = function(data) {
-    $simcir.children().remove();
     $s.setupSimcir($simcir, JSON.parse(data) );
   };
 
