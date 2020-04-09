@@ -16,6 +16,7 @@
     - [3月25日前半](https://www.dropbox.com/s/dplk8qh541ehj2g/200325a.pdf)
     - [3月25日後半](https://www.dropbox.com/s/4bpfvpm9ouuyno5/200325b.pdf)
 - 参考文献
+    - [専修学校設置基準の一部を改正する省令の施行等について（通知）](https://www.mext.go.jp/a_menu/shougai/senshuu/06032207.htm)
 
 Copyright (c) 2020 Yu Tomita
 
