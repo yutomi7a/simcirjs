@@ -17,7 +17,7 @@
     - [3月25日後半](https://www.dropbox.com/s/4bpfvpm9ouuyno5/200325b.pdf)
 ### 参考文献
 - [デジタル回路[JavaScript版]](http://home.a00.itscom.net/hatada/_toc/dc.html#dc2sim)
-- [専修学校設置基準の一部を改正する省令の施行等について（通知）](https://www.mext.go.jp/a_menu/shougai/senshuu/06032207.htm)
+- [SimcirJS(forked)](sandbox.html)
 
 Copyright (c) 2020 Yu Tomita
 
