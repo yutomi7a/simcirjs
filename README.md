@@ -1,5 +1,7 @@
 # *九州テクノカレッジ　論理回路サポートサイト*(富田2020)
+
 ***
+
 ## はじめに
 2020年九州テクノカレッジ・ハイテク情報科向けの論理回路に関する資料等を提供するサイトです．
 
@@ -16,7 +18,9 @@
     - [3月18日後半](https://www.dropbox.com/s/4zeuhecav2szhpg/200318b.pdf)
     - [3月25日前半](https://www.dropbox.com/s/dplk8qh541ehj2g/200325a.pdf)
     - [3月25日後半](https://www.dropbox.com/s/4bpfvpm9ouuyno5/200325b.pdf)
+
 ### 参考文献
+
 - [デジタル回路[JavaScript版]](http://home.a00.itscom.net/hatada/_toc/dc.html#dc2sim)
 - [SimcirJS(forked)](sandbox.html)
 
