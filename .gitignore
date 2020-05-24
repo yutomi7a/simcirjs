@@ -1,2 +1,4 @@
 /.settings
 /slides
+/media
+*slides.md
