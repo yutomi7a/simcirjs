@@ -24,6 +24,12 @@
 - [デジタル回路[JavaScript版]](http://home.a00.itscom.net/hatada/_toc/dc.html#dc2sim)
 - [SimcirJS(forked)](sandbox.html)
 
+### 講師について
+
+<a href="https://www.researchgate.net/profile/Yu_Tomita3">Yu Tomita on ResearchGate</a>
+
+[researchmap](https://researchmap.jp/yu_tomita)
+
 Copyright (c) 2020 Yu Tomita
 
 Licensed under the MIT license:
