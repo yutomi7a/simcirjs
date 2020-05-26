@@ -276,7 +276,7 @@
         <section >
             
             <h1><a id="user-content-論理回路" class="anchor" href="#論理回路" aria-hidden="true"></a>論理回路</h1>
-<p><code>#20200527a</code></p>
+<p><code>#20200527b</code></p>
 
             </section>
     
@@ -286,10 +286,10 @@
     
         <section >
             
-            <h2><a id="user-content-復習" class="anchor" href="#復習" aria-hidden="true"></a>復習</h2>
+            <h2><a id="user-content-順序機械の話" class="anchor" href="#順序機械の話" aria-hidden="true"></a>順序機械の話</h2>
 <ul>
-<li>ブール代数と論理素子</li>
-<li>FF回路</li>
+<li>「機械」と呼ばれる数学的な理論</li>
+<li>有向グラフによって動作を記述</li>
 </ul>
 
             </section>
@@ -300,7 +300,254 @@
     
         <section >
             
-            <h2><a id="user-content-ブール代数" class="anchor" href="#ブール代数" aria-hidden="true"></a>ブール代数</h2>
+            <h2><a id="user-content-自販機の状態遷移" class="anchor" href="#自販機の状態遷移" aria-hidden="true"></a>自販機の状態遷移</h2>
+
+            </section>
+    
+
+
+
+    
+        <section >
+            
+            <h3><a id="user-content-自販機の動作" class="anchor" href="#自販機の動作" aria-hidden="true"></a>自販機の動作</h3>
+<p>簡単な自販機の動作を考える:</p>
+<ul>
+<li><span class="fragment" >硬貨なしにボタンを押しても何もしない</span></li>
+<li><span class="fragment" >100円硬貨を1枚だけ受け付ける</span></li>
+<li><span class="fragment" >それ以上入れた場合には硬貨を返却</span></li>
+</ul>
+
+            </section>
+    
+
+
+
+    
+        <section >
+            
+            <h3><a id="user-content-自販機の状態変化" class="anchor" href="#自販機の状態変化" aria-hidden="true"></a>自販機の状態変化</h3>
+<p><span class="fragment">入力(ボタンor硬貨)</span>
+→<span class="fragment">出力(点灯or商品)</span>
+→<span class="fragment">状態の変化</span></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">入力</th>
+<th style="text-align:right">出力</th>
+<th style="text-align:left">状態</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">硬貨</td>
+<td style="text-align:right">商品選択ボタン点灯</td>
+<td style="text-align:left">商品選択ボタン待機</td>
+</tr>
+<tr>
+<td style="text-align:right">商品選択ボタン</td>
+<td style="text-align:right">商品を出力</td>
+<td style="text-align:left">硬貨待機</td>
+</tr>
+</tbody>
+</table>
+
+            </section>
+    
+
+
+
+    
+        <section >
+            
+            <h3><a id="user-content-ドリップコーヒー自販機の動作" class="anchor" href="#ドリップコーヒー自販機の動作" aria-hidden="true"></a>ドリップコーヒー自販機の動作</h3>
+<p>$B_1$: コーヒー選択ボタン，$B_2$: 砂糖の量ボタン，$B_3$: 抽出ボタン</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">入力</th>
+<th style="text-align:right">出力</th>
+<th style="text-align:left">状態</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">硬貨</td>
+<td style="text-align:right">$B_1$点灯</td>
+<td style="text-align:left">$B_1$待機</td>
+</tr>
+<tr>
+<td style="text-align:right">$B_1$</td>
+<td style="text-align:right">$B_2$点灯</td>
+<td style="text-align:left">$B_2$待機</td>
+</tr>
+<tr>
+<td style="text-align:right">$B_2$</td>
+<td style="text-align:right">$B_3$点灯</td>
+<td style="text-align:left">$B_3$待機</td>
+</tr>
+<tr>
+<td style="text-align:right">$B_3$</td>
+<td style="text-align:right">抽出 &amp; 扉を開口</td>
+<td style="text-align:left">取り出し待機</td>
+</tr>
+<tr>
+<td style="text-align:right">取り出し</td>
+<td style="text-align:right">扉を閉口</td>
+<td style="text-align:left">硬貨待機</td>
+</tr>
+</tbody>
+</table>
+
+            </section>
+    
+
+
+
+    
+        <section >
+            
+            <h3><a id="user-content-カウンタの動作" class="anchor" href="#カウンタの動作" aria-hidden="true"></a>カウンタの動作</h3>
+<p>5進カウンタの動作を考える:</p>
+<ul>
+<li><span class="fragment" >0,1,2,3,4を順に出力</span></li>
+<li><span class="fragment" >4のあとは0を出力</span></li>
+<li><span class="fragment" >入力はクロックパルス(CP)</span></li>
+</ul>
+
+            </section>
+    
+
+
+
+    
+        <section >
+            
+            <h3><a id="user-content-カウンタの状態変化" class="anchor" href="#カウンタの状態変化" aria-hidden="true"></a>カウンタの状態変化</h3>
+<p><span class="fragment" data-autoslide="2000">入力(クロックパルス)</span>
+→<span class="fragment" data-autoslide="4000">出力($0$~$4$)</span>
+→<span class="fragment" data-autoslide="8000">状態の変化</span></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">入力</th>
+<th style="text-align:right">出力</th>
+<th style="text-align:left">状態</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">CP</td>
+<td style="text-align:right">0</td>
+<td style="text-align:left">1の出力を待機</td>
+</tr>
+<tr>
+<td style="text-align:right">CP</td>
+<td style="text-align:right">1</td>
+<td style="text-align:left">2の出力を待機</td>
+</tr>
+<tr>
+<td style="text-align:right">CP</td>
+<td style="text-align:right">2</td>
+<td style="text-align:left">3の出力を待機</td>
+</tr>
+<tr>
+<td style="text-align:right">CP</td>
+<td style="text-align:right">3</td>
+<td style="text-align:left">4の出力を待機</td>
+</tr>
+<tr>
+<td style="text-align:right">CP</td>
+<td style="text-align:right">4</td>
+<td style="text-align:left">0の出力待機</td>
+</tr>
+</tbody>
+</table>
+
+            </section>
+    
+
+
+
+    
+        <section >
+            
+            <h2><a id="user-content-状態遷移図" class="anchor" href="#状態遷移図" aria-hidden="true"></a>状態遷移図</h2>
+
+            </section>
+    
+
+
+
+    
+        <section >
+            
+            <h3><a id="user-content-状態遷移図とは" class="anchor" href="#状態遷移図とは" aria-hidden="true"></a>状態遷移図とは</h3>
+<ul>
+<li><span class="fragment" >状態の変化を有向グラフで表したもの</span></li>
+<li><span class="fragment" >各ノード$q_i$は状態を表す</span></li>
+<li><span class="fragment" >各エッジは入出力に応じた状態の遷移を表す</span>
+<ul>
+<li><span class="fragment" >入力 $i$と出力 $o$ に対応する遷移は <em>$i/o$</em> というラベルがつく</span></li>
+</ul>
+</li>
+</ul>
+
+            </section>
+    
+
+
+
+    
+        <section >
+            
+            <h3><a id="user-content-簡単な自販機の場合" class="anchor" href="#簡単な自販機の場合" aria-hidden="true"></a>簡単な自販機の場合</h3>
+<p><img src="media/automata.jpg" alt=""></p>
+<ul>
+<li>$q_0$: 硬貨が入っていない状態</li>
+<li>$q_1$: 硬貨が入っている状態</li>
+</ul>
+<p><span style="color:blue"><em>ミーリーマシン</em></span>とも呼ばれる</p>
+
+            </section>
+    
+
+
+
+    
+        <section >
+            
+            <h3><a id="user-content-カウンタをミーリーマシンで表す" class="anchor" href="#カウンタをミーリーマシンで表す" aria-hidden="true"></a>カウンタをミーリーマシンで表す</h3>
+<p><img src="media/counter1.jpg" alt=""></p>
+<ul>
+<li>$q_i$: $i$を出力する前の状態($0\leq i\leq 4$)</li>
+</ul>
+
+            </section>
+    
+
+
+
+    
+        <section >
+            
+            <h3><a id="user-content-カウンタをミーリーマシンで表す-1" class="anchor" href="#カウンタをミーリーマシンで表す-1" aria-hidden="true"></a>カウンタをミーリーマシンで表す</h3>
+<ul>
+<li>カウンタの出力は<em>入力と無関係</em></li>
+<li>カウンタの出力を<em>状態と同一視</em></li>
+</ul>
+
+            </section>
+    
+
+
+
+    
+        <section >
+            
+            <h3><a id="user-content-各状態を-出力-と見做す" class="anchor" href="#各状態を-出力-と見做す" aria-hidden="true"></a>各状態を<em>出力</em>と見做す:</h3>
+<p><img src="media/counter2.jpg" alt=""></p>
+<p>こちらは<span style="color:blue"><em>ムーアマシン</em></span>と呼ばれる</p>
 
             </section>
     
@@ -310,113 +557,21 @@
     
     <section>
         <section >
-            <h2><a id="user-content-2元ブール代数とは" class="anchor" href="#2元ブール代数とは" aria-hidden="true"></a>(2元)ブール代数とは</h2>
+            <h2><a id="user-content-ミーリームーアマシン" class="anchor" href="#ミーリームーアマシン" aria-hidden="true"></a>{ミーリー/ムーア}マシン</h2>
+<p>どちらも同じ<em>オートマトン</em>です.</p>
 <ul>
-<li>0と1からなる演算</li>
-<li>掛け算と足し算が定義</li>
-<li>0の補元は1($\overline{0}=1$)</li>
-<li>1の補元は0($\overline{1}=0$)</li>
+<li>状態遷移図で表される</li>
+<li>各ノードは状態を表す</li>
+<li>各エッジは状態の遷移を表す</li>
 </ul>
 
             </section>
         
             <section >
-                <h3><a id="user-content-論理積" class="anchor" href="#論理積" aria-hidden="true"></a>(論理)積</h3>
-<ul>
-<li>$A$と$B$の掛け算: $A\cdot B$</li>
-<li>$A\cdot B=\min (A,B)$</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">$_B\backslash ^A$</th>
-<th>$0$</th>
-<th>$1$</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">$0$</td>
-<td>$0$</td>
-<td>$0$</td>
-</tr>
-</tbody>
-<tbody>
-<tr>
-<td style="text-align:left">$1$</td>
-<td>$0$</td>
-<td>$1$</td>
-</tr>
-</tbody>
-<caption id="">積の演算表</caption>
-</table>
-
-            </section>
-        
-            <section >
-                <h3><a id="user-content-論理和" class="anchor" href="#論理和" aria-hidden="true"></a>(論理)和</h3>
-<ul>
-<li>$A$と$B$の足し算: $A+ B$</li>
-<li>$A+B=\max (A,B)$</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">$_B\backslash ^A$</th>
-<th>$0$</th>
-<th>$1$</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">$0$</td>
-<td>$0$</td>
-<td>$1$</td>
-</tr>
-</tbody>
-<tbody>
-<tr>
-<td style="text-align:left">$1$</td>
-<td>$1$</td>
-<td>$1$</td>
-</tr>
-</tbody>
-<caption id="">和の演算表</caption>
-</table>
-
-            </section>
-        
-            <section >
-                <h3><a id="user-content-補元" class="anchor" href="#補元" aria-hidden="true"></a>補元</h3>
-<ul>
-<li>$A$の補元: $\overline{A}$</li>
-<li>$\overline{A} = 1 - A$</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">$A$</th>
-<th></th>
-<th style="text-align:left">$\overline{A}$</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">$0$</td>
-<td></td>
-<td style="text-align:left">$1$</td>
-</tr>
-</tbody>
-<tbody>
-<tr>
-<td style="text-align:left">$1$</td>
-<td></td>
-<td style="text-align:left">$0$</td>
-</tr>
-</tbody>
-<caption id="">演算表</caption>
-</table>
-
+                <h3><a id="user-content-オートマトン" class="anchor" href="#オートマトン" aria-hidden="true"></a>オートマトン</h3>
+<dl> <dt>定義1(オートマトン)</dt>
+  <dd> $\Sigma$ を記号の集合, $Q$を状態の集合, $\delta: Q\times \Sigma\to Q$を状態遷移関数, $F\subseteq Q$ を受理状態の集合とする. この時$(\Sigma, Q, \delta, q_00,F)$ を$\Sigma$上のオートマトンと呼ぶ. ただし$q_0\in Q$は開始状態を表す.</dd>
+</dl>
             </section>
         
 
@@ -428,565 +583,11 @@
     
         <section >
             
-            <h3><a id="user-content-論理関数" class="anchor" href="#論理関数" aria-hidden="true"></a>論理関数</h3>
+            <h2><a id="user-content-次回" class="anchor" href="#次回" aria-hidden="true"></a>次回</h2>
 <ul>
-<li>ブール代数の式のこと
-<ul>
-<li>$F = A+B\cdot C$ などと表記</li>
-<li>$A\cdot B$は$AB$と書いても良い
-<ul>
-<li>積の優先順位は和よりも高いため</li>
+<li>ミーリーマシンによる簡単化について</li>
+<li>最終<s>テスト</s>課題について</li>
 </ul>
-</li>
-</ul>
-</li>
-</ul>
-
-            </section>
-    
-
-
-
-    
-        <section >
-            
-            <h2><a id="user-content-順序回路" class="anchor" href="#順序回路" aria-hidden="true"></a>順序回路</h2>
-<ul>
-<li>出力が入力や出力の時間順序に依存する回路を
-<strong style="color:red">順序回路</strong>
-と呼ぶ
-<ul>
-<li>ある時点の<strong>状態</strong>と入力で次の出力が決定</li>
-<li><strong style="color:blue">入力と直前の内部状態</strong>の関数で出力を表現</li>
-<li>フリップフロップ(FF)回路とも</li>
-</ul>
-</li>
-</ul>
-
-            </section>
-    
-
-
-
-    
-        <section >
-            
-            <h3><a id="user-content-rs-ff" class="anchor" href="#rs-ff" aria-hidden="true"></a>RS-FF</h3>
-<img class="plain"  src="media/automata-rsff.jpg"/>
-<ul>
-<li>$S$と$R$は入力, $Q$と$\overline{Q}$は出力</li>
-<li>直前が$S=1$なら$Q=1$</li>
-<li>直前が$R=1$なら$Q=0$</li>
-<li>$S=R=0$のとき, $Q$は直前の状態を記憶
-<ul>
-<li>$S=R=1$は禁止状態</li>
-</ul>
-</li>
-</ul>
-
-            </section>
-    
-
-
-
-    
-        <section >
-            
-            <h3><a id="user-content-rs-ffの動作を確認" class="anchor" href="#rs-ffの動作を確認" aria-hidden="true"></a>RS-FFの動作を確認</h3>
-<p><a href="https://yutomi7a.github.io/simcirjs/rsff.html">https://yutomi7a.github.io/simcirjs/rsff.html</a></p>
-<iframe width="825" height="425" andbox="allow-same-origin allow-forms allow-scripts" src="../rsff.html">
-</iframe>
-<p><small>※上のRS-FFは負論理で実装されているため, NOTゲートを挟んで入力を反転させます. </small></p>
-
-            </section>
-    
-
-
-
-    
-        <section >
-            
-            <h3><a id="user-content-rst-ff" class="anchor" href="#rst-ff" aria-hidden="true"></a>RST-FF</h3>
-<img class="plain"  src="media/automata-rstff.jpg"/>
-<ul>
-<li>クロックパルス($CP$)の入力Tが追加</li>
-<li>$CP＝1$の時のみSまたはRの入力が有効化
-<ul>
-<li>$CP=0$ならSとRは無視される</li>
-</ul>
-</li>
-</ul>
-
-            </section>
-    
-
-
-
-    
-        <section >
-            
-            <h3><a id="user-content-rst-ffの構造" class="anchor" href="#rst-ffの構造" aria-hidden="true"></a>RST-FFの構造</h3>
-<img class="plain"  src="media/automata-rstff-structure.jpg"/>
-<ul>
-<li>RS-FFの各入力に注目
-<ul>
-<li>$T\land S$ → S</li>
-<li>$T\land R$ → R</li>
-</ul>
-</li>
-</ul>
-
-            </section>
-    
-
-
-
-    
-        <section >
-            
-            <h3><a id="user-content-jk-ff" class="anchor" href="#jk-ff" aria-hidden="true"></a>JK-FF</h3>
-<img class="plain"  src="media/automata-jkff.jpg"/>
-<ul>
-<li>RST-FFを改良したもの</li>
-<li>直前が$J=1$なら$Q=1$</li>
-<li>直前が$K=1$なら$Q=0$</li>
-<li>$J=K=0$のとき, $Q$は直前の状態を記憶</li>
-<li>$J=K=1$のとき, $Q$は直前の状態を<em>反転</em></li>
-</ul>
-
-            </section>
-    
-
-
-
-    
-        <section >
-            
-            <h3><a id="user-content-jk-ffの動作を確認" class="anchor" href="#jk-ffの動作を確認" aria-hidden="true"></a>JK-FFの動作を確認</h3>
-<p><a href="https://yutomi7a.github.io/simcirjs/jkff.html">https://yutomi7a.github.io/simcirjs/jkff.html</a></p>
-<iframe width="825" height="425" andbox="allow-same-origin allow-forms allow-scripts" src="../jkff.html">
-</iframe>
-            </section>
-    
-
-
-
-    
-        <section >
-            
-            <h3><a id="user-content-d-ff" class="anchor" href="#d-ff" aria-hidden="true"></a>D-FF</h3>
-<img class="plain"  src="media/automata-dff.jpg"/>
-<ul>
-<li>Dへの入力をずらして出力する回路</li>
-<li>Tへの入力(CP)に合わせて出力
-<ul>
-<li>ポジティブエッジトリガーの場合には, Tが上がるタイミングで出力</li>
-<li>ネガティブエッジトリガーの場合には, Tが下がるタイミングで出力</li>
-</ul>
-</li>
-</ul>
-
-            </section>
-    
-
-
-
-    
-        <section >
-            
-            <h3><a id="user-content-d-ffの動作を確認" class="anchor" href="#d-ffの動作を確認" aria-hidden="true"></a>D-FFの動作を確認</h3>
-<p><a href="https://yutomi7a.github.io/simcirjs/dff.html">https://yutomi7a.github.io/simcirjs/dff.html</a></p>
-<iframe width="825" height="425" andbox="allow-same-origin allow-forms allow-scripts" src="../dff.html">
-</iframe>
-<small>上はネガティブエッジトリガーです. </small>
-            </section>
-    
-
-
-
-    
-        <section >
-            
-            <h2><a id="user-content-カウンタ" class="anchor" href="#カウンタ" aria-hidden="true"></a>カウンタ</h2>
-
-            </section>
-    
-
-
-
-    
-        <section >
-            
-            <h3><a id="user-content-カウンタの種類" class="anchor" href="#カウンタの種類" aria-hidden="true"></a>カウンタの種類</h3>
-<ul>
-<li>
-<p>入力されるCPの数を一定まで数える順序回路</p>
-<ul>
-<li><strong>アップカウンタ</strong>: 1ずつ増加</li>
-<li><strong>ダウンカウンタ</strong>: 1ずつ減少</li>
-</ul>
-</li>
-<li>
-<p>典型的なのは <strong>$n$ビット$2$進カウンタ</strong></p>
-<ul>
-<li>アップカウンタなら, $2^n-1$まで数えたら$0$を出力</li>
-<li>ダウンカウンタなら, $0$の次に$2^n-1$を出力</li>
-</ul>
-</li>
-</ul>
-
-            </section>
-    
-
-
-
-    
-        <section >
-            
-            <h3><a id="user-content-カウンタの設計" class="anchor" href="#カウンタの設計" aria-hidden="true"></a>カウンタの設計</h3>
-<p>例題: $2$ビット$2$進アップカウンタの(JK-FFを用いた)設計</p>
-<ol>
-<li>FFの各状態遷移に対する入力条件表を用意</li>
-<li><strong style="color:red">拡大された状態遷移表(拡大入力要求表)</strong>を作成</li>
-<li>FFの入力の条件式を求める</li>
-</ol>
-<ul>
-<li>カルノー図を使うことも多い</li>
-<li></li>
-</ul>
-
-            </section>
-    
-
-
-
-    
-        <section >
-            
-            <h3><a id="user-content-jk-ffの状態遷移表" class="anchor" href="#jk-ffの状態遷移表" aria-hidden="true"></a>JK-FFの状態遷移表</h3>
-<table>
-<thead>
-<tr>
-<th>$J$</th>
-<th>$K$</th>
-<th>$T$</th>
-<th>$Q^{t+1}$</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>0</td>
-<td>0</td>
-<td>↑</td>
-<td>$Q^t$</td>
-</tr>
-<tr>
-<td>0</td>
-<td>1</td>
-<td>↑</td>
-<td>0</td>
-</tr>
-<tr>
-<td>1</td>
-<td>0</td>
-<td>↑</td>
-<td>1</td>
-</tr>
-<tr>
-<td>1</td>
-<td>1</td>
-<td>↑</td>
-<td>$\overline{Q^{t+1}}$</td>
-</tr>
-</tbody>
-<caption id="jkff">JK-FFの状態遷移表</caption>
-</table>
-
-            </section>
-    
-
-
-
-    
-        <section >
-            
-            <h3><a id="user-content-状態遷移に対する入力条件表" class="anchor" href="#状態遷移に対する入力条件表" aria-hidden="true"></a>状態遷移に対する入力条件表</h3>
-<table>
-<thead>
-<tr>
-<th>$Q^t\to Q^{t+1}$</th>
-<th>$J$の条件</th>
-<th>$K$の条件</th>
-<th>状態動作</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>$0\to 0$</td>
-<td>$0$</td>
-<td>-</td>
-<td>保持/リセット</td>
-</tr>
-<tr>
-<td>$0\to 1$</td>
-<td>$1$</td>
-<td>-</td>
-<td>反転/セット</td>
-</tr>
-<tr>
-<td>$1\to 0$</td>
-<td>-</td>
-<td>$0$</td>
-<td>反転/リセット</td>
-</tr>
-<tr>
-<td>$1\to 1$</td>
-<td>-</td>
-<td>$1$</td>
-<td>保持/セット</td>
-</tr>
-</tbody>
-<caption id="jkff">状態遷移に対するJK-FFの条件</caption>
-</table>
-
-            </section>
-    
-
-
-
-    
-        <section >
-            
-            <h3><a id="user-content-jk-ffの拡大状態遷移表" class="anchor" href="#jk-ffの拡大状態遷移表" aria-hidden="true"></a>JK-FFの拡大状態遷移表</h3>
-<table>
-<thead>
-<tr>
-<th>$Q_1^{t}$</th>
-<th>$Q_{0}^{t}$</th>
-<th>$Q_1^{t+1}$</th>
-<th>$Q_{0}^{t+1}$</th>
-<th>$J_1$</th>
-<th>$K_1$</th>
-<th>$J_0$</th>
-<th>$K_0$</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><span style="color:red">0</span></td>
-<td><span style="color:blue">0</span></td>
-<td><span style="color:red">0</span></td>
-<td><span style="color:blue">1</span></td>
-<td>0</td>
-<td>-</td>
-<td>1</td>
-<td>-</td>
-</tr>
-<tr>
-<td><span style="color:red">0</span></td>
-<td><span style="color:blue">1</span></td>
-<td><span style="color:red">1</span></td>
-<td><span style="color:blue">0</span></td>
-<td>1</td>
-<td>-</td>
-<td>-</td>
-<td>1</td>
-</tr>
-<tr>
-<td><span style="color:red">1</span></td>
-<td><span style="color:blue">0</span></td>
-<td><span style="color:red">1</span></td>
-<td><span style="color:blue">1</span></td>
-<td>-</td>
-<td>0</td>
-<td>1</td>
-<td>-</td>
-</tr>
-<tr>
-<td><span style="color:red">1</span></td>
-<td><span style="color:blue">1</span></td>
-<td><span style="color:red">0</span></td>
-<td><span style="color:blue">0</span></td>
-<td>-</td>
-<td>1</td>
-<td>-</td>
-<td>1</td>
-</tr>
-</tbody>
-<caption id="jkff">JK-FFの拡大状態遷移表</caption>
-</table>
-<p>ここから各JK-FFの$J$, $K$それぞれの条件式を求める</p>
-
-            </section>
-    
-
-
-
-    
-        <section >
-            
-            <h3><a id="user-content-入力j_1の条件式を求める" class="anchor" href="#入力j_1の条件式を求める" aria-hidden="true"></a>入力$J_1$の条件式を求める</h3>
-<p>ドントケア(-)は含めても含めなくとも良い</p>
-<table>
-<thead>
-<tr></tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">$_{Q^{t}_1}\backslash ^{Q^{t}_0}$</td>
-<td>0</td>
-<td>1</td>
-</tr>
-<tr>
-<td style="text-align:left">0</td>
-<td>0</td>
-<td>1</td>
-</tr>
-<tr>
-<td style="text-align:left">1</td>
-<td>-</td>
-<td>-</td>
-</tr>
-</tbody>
-<caption id="j_1">$J_1$の条件式</caption>
-</table>
-<p>$J_1 = Q^{t}_1$</p>
-
-            </section>
-    
-
-
-
-    
-        <section >
-            
-            <h3><a id="user-content-入力j_0の条件式を求める" class="anchor" href="#入力j_0の条件式を求める" aria-hidden="true"></a>入力$J_0$の条件式を求める</h3>
-<p>なるべく大きなグループで囲む</p>
-<table>
-<thead>
-<tr></tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">$_{Q^{t}_1}\backslash ^{Q^{t}_0}$</td>
-<td>0</td>
-<td>1</td>
-</tr>
-<tr>
-<td style="text-align:left">0</td>
-<td>1</td>
-<td>-</td>
-</tr>
-<tr>
-<td style="text-align:left">1</td>
-<td>1</td>
-<td>-</td>
-</tr>
-</tbody>
-<caption id="j_0">$J_0$の条件式</caption>
-</table>
-<p>$J_0 = 1$</p>
-
-            </section>
-    
-
-
-
-    
-        <section >
-            
-            <h3><a id="user-content-入力k_1の条件式を求める" class="anchor" href="#入力k_1の条件式を求める" aria-hidden="true"></a>入力$K_1$の条件式を求める</h3>
-<p>ドントケア(-)は含めても含めなくとも良い</p>
-<table>
-<thead>
-<tr></tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">$_{Q^{t}_1}\backslash ^{Q^{t}_0}$</td>
-<td>0</td>
-<td>1</td>
-</tr>
-<tr>
-<td style="text-align:left">0</td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr>
-<td style="text-align:left">1</td>
-<td>0</td>
-<td>1</td>
-</tr>
-</tbody>
-<caption id="k_1">$K_1$の条件式</caption>
-</table>
-<p>$K_1 = Q^{t}_1$</p>
-
-            </section>
-    
-
-
-
-    
-        <section >
-            
-            <h3><a id="user-content-入力k_0の条件式を求める" class="anchor" href="#入力k_0の条件式を求める" aria-hidden="true"></a>入力$K_0$の条件式を求める</h3>
-<p>なるべく大きなグループで囲む</p>
-<table>
-<thead>
-<tr></tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">$_{Q^{t}_1}\backslash ^{Q^{t}_0}$</td>
-<td>0</td>
-<td>1</td>
-</tr>
-<tr>
-<td style="text-align:left">0</td>
-<td>1</td>
-<td>-</td>
-</tr>
-<tr>
-<td style="text-align:left">1</td>
-<td>1</td>
-<td>-</td>
-</tr>
-</tbody>
-<caption id="j_0">$J_0$の条件式</caption>
-</table>
-<p>$K_0 = 1$</p>
-
-            </section>
-    
-
-
-
-    
-        <section >
-            
-            <h3><a id="user-content-条件式から順序回路を構成" class="anchor" href="#条件式から順序回路を構成" aria-hidden="true"></a>条件式から順序回路を構成</h3>
-<p>$J=K=1$とし, $Q_0$の出力を次の$J$と$K$に入力
-<img src="media/automata-2b2dcounter.jpg" alt=""></p>
-
-            </section>
-    
-
-
-
-    
-        <section >
-            
-            <ul>
-<li>$N$進カウンタも設計可能
-<ul>
-<li>アップカウンタなら, $N-1$まで数えたら$0$を出力</li>
-<li>ダウンカウンタなら, $0$の次に$N-1$を出力</li>
-<li>本日の課題として出題</li>
-</ul>
-</li>
-</ul>
-<hr>
 
             </section>
     
