@@ -204,8 +204,8 @@
             $button.addClass('simcir-basicset-switch-button-pressed');
           }
           updateOutput();
-          $(document).on('mouseup', button_mouseUpHandler);
-          $(document).on('touchend', button_mouseUpHandler);
+          // $(document).on('mouseup', button_mouseUpHandler);
+          $(document).on('mouseup touchend', button_mouseUpHandler);
         };
         var button_mouseUpHandler = function(event) {
           if (type == 'PushOn') {
@@ -221,18 +221,18 @@
             }
           }
           updateOutput();
-          $(document).off('mouseup', button_mouseUpHandler);
-          $(document).off('touchend', button_mouseUpHandler);
+          // $(document).off('mouseup', button_mouseUpHandler);
+          $(document).off('mouseup touchend', button_mouseUpHandler);
         };
         device.$ui.on('deviceAdd', function() {
           $s.enableEvents($button, true);
-          $button.on('mousedown', button_mouseDownHandler);
-          $button.on('touchstart', button_mouseDownHandler);
+          // $button.on('mousedown', button_mouseDownHandler);
+          $button.on('mousedown touchstart', button_mouseDownHandler);
         });
         device.$ui.on('deviceRemove', function() {
           $s.enableEvents($button, false);
-          $button.off('mousedown', button_mouseDownHandler);
-          $button.off('touchstart', button_mouseDownHandler);
+          // $button.off('mousedown', button_mouseDownHandler);
+          $button.off('mousedown touchstart', button_mouseDownHandler);
         });
         device.$ui.addClass('simcir-basicset-switch');
       };
