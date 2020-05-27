@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
 
-  <title>Logic Circuits</title>
+  <title>200527a</title>
 
   <meta name="description" content="">
   <meta name="author" content="">
@@ -630,7 +630,7 @@
 <p>典型的なのは <strong>$n$ビット$2$進カウンタ</strong></p>
 <ul>
 <li>アップカウンタなら, $2^n-1$まで数えたら$0$を出力</li>
-<li>ダウンカウンタなら, $0$の次に$2^n-1$を出力</li>
+<li>ダウンカウンタなら, $2^n-1$から数えて$0$まで出力</li>
 </ul>
 </li>
 </ul>
@@ -644,7 +644,7 @@
         <section >
             
             <h3><a id="user-content-カウンタの設計" class="anchor" href="#カウンタの設計" aria-hidden="true"></a>カウンタの設計</h3>
-<p>例題: $2$ビット$2$進アップカウンタの(JK-FFを用いた)設計</p>
+<p>一般的なカウンタの(JK-FFを用いた)設計</p>
 <ol>
 <li>FFの各状態遷移に対する入力条件表を用意</li>
 <li><strong style="color:red">拡大された状態遷移表(拡大入力要求表)</strong>を作成</li>
@@ -652,7 +652,20 @@
 </ol>
 <ul>
 <li>カルノー図を使うことも多い</li>
-<li></li>
+</ul>
+
+            </section>
+    
+
+
+
+    
+        <section >
+            
+            <h3><a id="user-content-例題-2ビット2進アップカウンタ" class="anchor" href="#例題-2ビット2進アップカウンタ" aria-hidden="true"></a>例題: $2$ビット$2$進アップカウンタ</h3>
+<ul>
+<li>$0\to 1\to 2\to 3\to 0\to\ldots$と推移</li>
+<li>二つのJK-FFを使用</li>
 </ul>
 
             </section>
@@ -677,26 +690,26 @@
 <tr>
 <td>0</td>
 <td>0</td>
-<td>↑</td>
+<td>$\rceil\hspace{-.39in}\downarrow\hspace{-.39in}\lfloor$</td>
 <td>$Q^t$</td>
 </tr>
 <tr>
 <td>0</td>
 <td>1</td>
-<td>↑</td>
+<td>$\rceil\hspace{-.39in}\downarrow\hspace{-.39in}\lfloor$</td>
 <td>0</td>
 </tr>
 <tr>
 <td>1</td>
 <td>0</td>
-<td>↑</td>
+<td>$\rceil\hspace{-.39in}\downarrow\hspace{-.39in}\lfloor$</td>
 <td>1</td>
 </tr>
 <tr>
 <td>1</td>
 <td>1</td>
-<td>↑</td>
-<td>$\overline{Q^{t+1}}$</td>
+<td>$\rceil\hspace{-.39in}\downarrow\hspace{-.39in}\lfloor$</td>
+<td>$\overline{Q^{t}}$</td>
 </tr>
 </tbody>
 <caption id="jkff">JK-FFの状態遷移表</caption>
@@ -736,13 +749,13 @@
 <tr>
 <td>$1\to 0$</td>
 <td>-</td>
-<td>$0$</td>
+<td>$1$</td>
 <td>反転/リセット</td>
 </tr>
 <tr>
 <td>$1\to 1$</td>
 <td>-</td>
-<td>$1$</td>
+<td>$0$</td>
 <td>保持/セット</td>
 </tr>
 </tbody>
@@ -850,7 +863,7 @@
 </tbody>
 <caption id="j_1">$J_1$の条件式</caption>
 </table>
-<p>$J_1 = Q^{t}_1$</p>
+<p>$J_1 = Q^{t}_0$</p>
 
             </section>
     
@@ -920,7 +933,7 @@
 </tbody>
 <caption id="k_1">$K_1$の条件式</caption>
 </table>
-<p>$K_1 = Q^{t}_1$</p>
+<p>$K_1 = Q^{t}_0$</p>
 
             </section>
     
