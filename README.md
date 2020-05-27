@@ -18,14 +18,20 @@
     - [3月18日後半](https://www.dropbox.com/s/4zeuhecav2szhpg/200318b.pdf)
     - [3月25日前半](https://www.dropbox.com/s/dplk8qh541ehj2g/200325a.pdf)
     - [3月25日後半](https://www.dropbox.com/s/4bpfvpm9ouuyno5/200325b.pdf)
-    - [5月27日前半](https://yutomi7a.github.io/simcirjs/200527a/#/)
-    - [5月27日後半](https://yutomi7a.github.io/simcirjs/200527b/#/)
-
+    - [5月27日(6月1日)前半](https://yutomi7a.github.io/simcirjs/200527a/#/)
+    - [5月27日(6月1日)後半](https://yutomi7a.github.io/simcirjs/200527b/#/)
+- 課題(メールなどで提出)
+    - [5月27日(6月1日)](https://www.dropbox.com/s/mjr5fztlr8dr4ci/200527qa.pdf?dl=0)
+      - 提出先: yutomi7a@じーめーる.com (じーめーるをgmailに書き換え) またはLINEアカウント
+      - 解答した用紙はカメラやスキャナで撮影し, 画像ファイルにして提出してください
+        - 上のpdfをプリントアウトして書き込み
+        - ノートに書き写してもOK
+  
 ### JavaScript教材 
 
 - [デジタル回路[JavaScript版]](http://home.a00.itscom.net/hatada/_toc/dc.html#dc2sim)
   - デジタル回路の基礎を学べるサイト. 
-  - 残念ながらRST-FFがうまく動いていない(2020年5月現在).
+  - 残念ながらJK-FFやD-FFなどがうまく動いていません(2020年5月現在).
 - [SimcirJS(forked)](sandbox.html)
   - 自分で回路を組んで動作を確認できるJavaScriptプログラム.
   - こちらでforkし, OSC(クロックパルスを入力するデバイス)の周波数を見やすいように調整しました.
@@ -34,13 +40,14 @@
 ### 参考文献(五十音順)
 
 おすすめの教科書ではありませんが, 特に参考にしているものだけを取り上げます.
+
 - 岩出秀平『[[第３版] 明快解説・箇条書式　ディジタル回路](http://muisuri.my.coocan.jp/electro.html) 』
 - グッドステイン, R.L.『ブール代数』赤攝也訳, 培風館, 1971.
 - 細井勉『[情報科学のための論理数学](https://www.nippyo.co.jp/shop/book/1291.html)』
 - 宮崎佳典 新谷誠 中谷広正『[理工系のための離散数学](http://www.tokyo-tosho.co.jp/books/ISBN978-4-489-02152-7.html)』
 - 湯田春雄 堀端孝俊『[しっかり学べる 基礎ディジタル回路](https://www.morikita.co.jp/books/book/1864)』
 
-### 講師について
+## 講師について
 
 普段は回路と無縁な研究をしています.
 
