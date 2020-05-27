@@ -25,7 +25,7 @@
 
 - [デジタル回路[JavaScript版]](http://home.a00.itscom.net/hatada/_toc/dc.html#dc2sim)
   - デジタル回路の基礎を学べるサイト. 
-  - 残念ながらRST-FFがうまく動いていない(2020年5月現在).
+  - 残念ながらJK-FFやD-FFなどがうまく動いていません(2020年5月現在).
 - [SimcirJS(forked)](sandbox.html)
   - 自分で回路を組んで動作を確認できるJavaScriptプログラム.
   - こちらでforkし, OSC(クロックパルスを入力するデバイス)の周波数を見やすいように調整しました.
