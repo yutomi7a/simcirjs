@@ -20,6 +20,8 @@
     - [3月25日後半](https://www.dropbox.com/s/4bpfvpm9ouuyno5/200325b.pdf)
     - [5月27日(6月1日)前半](https://yutomi7a.github.io/simcirjs/200527a/#/) [pdf版はこちら](https://www.dropbox.com/s/n4joa7jv2x5p580/200527a.pdf?dl=0)
     - [5月27日(6月1日)後半](https://yutomi7a.github.io/simcirjs/200527b/#/) [pdf版はこちら](https://www.dropbox.com/s/lmg2ypsgxicsg2t/200527b.pdf?dl=0)
+    - [6月3日](https://yutomi7a.github.io/simcirjs/200603_slides.html) 
+  
 - 課題(メールなどで提出)
     - [5月27日(6月1日)](https://www.dropbox.com/s/mjr5fztlr8dr4ci/200527qa.pdf?dl=0)
       - 提出先: yutomi7a@じーめーる.com (じーめーるをgmailに書き換え) またはLINEアカウント
