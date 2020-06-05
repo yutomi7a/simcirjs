@@ -24,11 +24,19 @@
   
 - 課題(メールなどで提出)
     - [5月27日(6月1日)](https://www.dropbox.com/s/mjr5fztlr8dr4ci/200527qa.pdf?dl=0)
-      - 提出先: yutomi7a@じーめーる.com (じーめーるをgmailに書き換え) またはLINEアカウント
-      - 解答した用紙はカメラやスキャナで撮影し, 画像ファイルにして提出してください
-        - 上のpdfをプリントアウトして書き込み
-        - ノートに書き写してもOK
-  
+      * 提出先: yutomi7a@じーめーる.com (じーめーるをgmailに書き換え) またはLINEアカウント
+      * 解答した用紙はカメラやスキャナで撮影し, 画像ファイルにして提出してください
+        - ノートやレポート用紙に書き写してもOK
+        - 可能ならpdfファイルのまま書き込み後提出してもOK
+    - 6月3日:
+  1. 次の論理関数をカルノー図を用いて簡単化し最小積和形を求めよ.
+     - $F_1= A\,B+A\,C+A\,\overline{B}\,C+\overline{A}\,B\,\overline{C}$
+     - $F_2= W\,X\,Y\,Z+\overline{W}\,\overline{X}+X\,\overline{Y}\,Z$
+  2. $F_2$の解答をAND, OR, NOT素子だけを使って実現してみよ(3入力のAND,OR素子を使っても構わない).
+     - 前回と同様メールまたはLINEアカウントから画像またはpdfファイルを提出すること.
+     - 締め切り: 6/15 23:59まで(以降の提出は減点)
+
+
 ### JavaScript教材 
 
 - [デジタル回路[JavaScript版]](http://home.a00.itscom.net/hatada/_toc/dc.html#dc2sim)
@@ -48,6 +56,7 @@
 - 細井勉『[情報科学のための論理数学](https://www.nippyo.co.jp/shop/book/1291.html)』
 - 宮崎佳典 新谷誠 中谷広正『[理工系のための離散数学](http://www.tokyo-tosho.co.jp/books/ISBN978-4-489-02152-7.html)』
 - 湯田春雄 堀端孝俊『[しっかり学べる 基礎ディジタル回路](https://www.morikita.co.jp/books/book/1864)』
+- Posthoff, Christian., Steinbach, Bernd., *[Logic Functions and Equations](https://www.springer.com/jp/book/9783030024192)*
 
 ## 講師について
 
