@@ -1,12 +1,14 @@
-# *九州テクノカレッジ　論理回路サポートサイト*(富田2020)
-
-***
+---
+title: 九テク論理回路サポートサイト
+author: 富田 裕
+date: 2020/6/6
+---
 
 ## はじめに
-2020年九州テクノカレッジ・ハイテク情報科向けの論理回路に関する資料等を提供するサイトです．
+2020年九州テクノカレッジ・ハイテク情報科向けの科目『論理回路』に関する資料等を提供するサイトです.
 
 ## 授業資料
-2/12の後半以降の資料のみ公開予定です．
+2/12の後半以降の資料のみ公開予定です.
 
 - スライド
     - [2月12日後半](https://www.dropbox.com/s/ytqq2k5z9hd8hz6/200212b.pdf)
@@ -30,8 +32,9 @@
         - 可能ならpdfファイルのまま書き込み後提出してもOK
     - 6月3日:
   1. 次の論理関数をカルノー図を用いて簡単化し最小積和形を求めよ.
-     - $F_1= A\,B+A\,C+A\,\overline{B}\,C+\overline{A}\,B\,\overline{C}$
-     - $F_2= W\,X\,Y\,Z+\overline{W}\,\overline{X}+X\,\overline{Y}\,Z$
+     \begin{align}F_1 &= A\,B+A\,C+A\,\overline{B}\,C+\overline{A}\,B\,\overline{C}\\
+     F_2 &= W\,X\,Y\,Z+\overline{W}\,\overline{X}+X\,\overline{Y}\,Z\end{align}
+     
   2. $F_2$の解答をAND, OR, NOT素子だけを使って実現してみよ(3入力のAND,OR素子を使っても構わない).
      - 前回と同様メールまたはLINEアカウントから画像またはpdfファイルを提出すること.
      - 締め切り: 6/15 23:59まで(以降の提出は減点)
@@ -40,7 +43,7 @@
 ### JavaScript教材 
 
 - [デジタル回路[JavaScript版]](http://home.a00.itscom.net/hatada/_toc/dc.html#dc2sim)
-  - デジタル回路の基礎を学べるサイト. 
+  - デジタル回路の基礎を学べるサイト.
   - 残念ながらJK-FFやD-FFなどがうまく動いていません(2020年5月現在).
 - [SimcirJS(forked)](sandbox.html)
   - 自分で回路を組んで動作を確認できるJavaScriptプログラム.
