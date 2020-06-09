@@ -11,6 +11,7 @@ date: 2020/6/6
 2/12の後半以降の資料のみ公開予定です.
 
 - スライド
+    - [補助スライド](https://yutomi7a.github.io/simcirjs/self_dual_slides.html)
     - [2月12日後半](https://www.dropbox.com/s/ytqq2k5z9hd8hz6/200212b.pdf)
     - [2月19日前半](https://www.dropbox.com/s/wlshuvalvedbh1g/200219a.pdf)
     - [2月19日後半](https://www.dropbox.com/s/hhxwycld0x0le4d/200219b.pdf)
