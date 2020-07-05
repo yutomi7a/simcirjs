@@ -14,7 +14,20 @@
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
   </style>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+   var mathElements = document.getElementsByClassName("math");
+   for (var i = 0; i < mathElements.length; i++) {
+    var texText = mathElements[i].firstChild;
+    if (mathElements[i].tagName == "SPAN") {
+     katex.render(texText.data, mathElements[i], {
+      displayMode: mathElements[i].classList.contains('display'),
+      throwOnError: false,
+      fleqn: false
+     });
+  }}});
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css" />
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
@@ -60,9 +73,11 @@
 <li>6月3日:</li>
 </ul>
 <ol type="1">
-<li><p>次の論理関数をカルノー図を用いて簡単化し最小積和形を求めよ. <span class="math display">\[\begin{align}F_1 &amp;= A\,B+A\,C+A\,\overline{B}\,C+\overline{A}\,B\,\overline{C}\\
-F_2 &amp;= W\,X\,Y\,Z+\overline{W}\,\overline{X}+X\,\overline{Y}\,Z\end{align}\]</span></p></li>
-<li><p><span class="math inline">\(F_2\)</span>の解答をAND, OR, NOT素子だけを使って実現してみよ(3入力のAND,OR素子を使っても構わない).</p>
+<li><p>次の論理関数をカルノー図を用いて簡単化し最小積和形を求めよ. <span class="math display">
+  \begin{align}F_1 &amp;= A\,B+A\,C+A\,\overline{B}\,C+\overline{A}\,B\,\overline{C}\\
+  F_2 &amp;= W\,X\,Y\,Z+\overline{W}\,\overline{X}+X\,\overline{Y}\,Z\end{align}
+  </span></p></li>
+<li><p><span class="math inline">F_2</span>の解答をAND, OR, NOT素子だけを使って実現してみよ(3入力のAND,OR素子を使っても構わない).</p>
 <ul>
 <li>前回と同様メールまたはLINEアカウントから画像またはpdfファイルを提出すること.</li>
 <li>締め切り: 6/15 23:59まで(以降の提出は減点)</li>
@@ -84,15 +99,16 @@ F_2 &amp;= W\,X\,Y\,Z+\overline{W}\,\overline{X}+X\,\overline{Y}\,Z\end{align}\]
 </ul></li>
 </ul>
 <h3 id="参考文献五十音順">参考文献(五十音順)</h3>
-<p>おすすめの教科書ではありませんが, 特に参考にしているものだけを取り上げます.</p>
-<ul>
-<li>岩出秀平『<a href="http://muisuri.my.coocan.jp/electro.html">[第３版] 明快解説・箇条書式　ディジタル回路</a> 』</li>
+<p>おすすめの教科書ではありませんが, 特に参考にしているものだけを取り上げます. また，無料で閲覧可能なWeb資料もあります.</p>
+<ol>
+<li>岩出秀平『<a href="http://muisuri.my.coocan.jp/electro.html">明快解説・箇条書式　ディジタル回路</a>』</li>
 <li>グッドステイン, R.L.『ブール代数』赤攝也訳, 培風館, 1971.</li>
+<li>坂井　修一『<a href="https://ocw.u-tokyo.ac.jp/course_11273/">論理回路基礎</a>』東京大学OCW, 2005</li>
 <li>細井勉『<a href="https://www.nippyo.co.jp/shop/book/1291.html">情報科学のための論理数学</a>』</li>
 <li>宮崎佳典 新谷誠 中谷広正『<a href="http://www.tokyo-tosho.co.jp/books/ISBN978-4-489-02152-7.html">理工系のための離散数学</a>』</li>
 <li>湯田春雄 堀端孝俊『<a href="https://www.morikita.co.jp/books/book/1864">しっかり学べる 基礎ディジタル回路</a>』</li>
 <li>Posthoff, Christian., Steinbach, Bernd., <em><a href="https://www.springer.com/jp/book/9783030024192">Logic Functions and Equations</a></em></li>
-</ul>
+</ol>
 <h2 id="講師について">講師について</h2>
 <p>普段は回路と無縁な研究をしています.</p>
 <p><a href="https://www.researchgate.net/profile/Yu_Tomita3">Yu Tomita on ResearchGate</a></p>

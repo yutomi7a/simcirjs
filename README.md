@@ -33,9 +33,11 @@ date: 2020/6/6
         - 可能ならpdfファイルのまま書き込み後提出してもOK
     - 6月3日:
   1. 次の論理関数をカルノー図を用いて簡単化し最小積和形を求めよ.
-     \begin{align}F_1 &= A\,B+A\,C+A\,\overline{B}\,C+\overline{A}\,B\,\overline{C}\\
-     F_2 &= W\,X\,Y\,Z+\overline{W}\,\overline{X}+X\,\overline{Y}\,Z\end{align}
-     
+    $$
+    \begin{align}F_1 &= A\,B+A\,C+A\,\overline{B}\,C+\overline{A}\,B\,\overline{C}\\
+    F_2 &= W\,X\,Y\,Z+\overline{W}\,\overline{X}+X\,\overline{Y}\,Z\end{align}
+    $$
+
   2. $F_2$の解答をAND, OR, NOT素子だけを使って実現してみよ(3入力のAND,OR素子を使っても構わない).
      - 前回と同様メールまたはLINEアカウントから画像またはpdfファイルを提出すること.
      - 締め切り: 6/15 23:59まで(以降の提出は減点)
@@ -53,14 +55,15 @@ date: 2020/6/6
 
 ### 参考文献(五十音順)
 
-おすすめの教科書ではありませんが, 特に参考にしているものだけを取り上げます.
+おすすめの教科書ではありませんが, 特に参考にしているものだけを取り上げます. また，無料で閲覧可能なWeb資料もあります. 
 
-- 岩出秀平『[[第３版] 明快解説・箇条書式　ディジタル回路](http://muisuri.my.coocan.jp/electro.html) 』
-- グッドステイン, R.L.『ブール代数』赤攝也訳, 培風館, 1971.
-- 細井勉『[情報科学のための論理数学](https://www.nippyo.co.jp/shop/book/1291.html)』
-- 宮崎佳典 新谷誠 中谷広正『[理工系のための離散数学](http://www.tokyo-tosho.co.jp/books/ISBN978-4-489-02152-7.html)』
-- 湯田春雄 堀端孝俊『[しっかり学べる 基礎ディジタル回路](https://www.morikita.co.jp/books/book/1864)』
-- Posthoff, Christian., Steinbach, Bernd., *[Logic Functions and Equations](https://www.springer.com/jp/book/9783030024192)*
+(#) 岩出秀平『[明快解説・箇条書式　ディジタル回路](http://muisuri.my.coocan.jp/electro.html)』
+(#) グッドステイン, R.L.『ブール代数』赤攝也訳, 培風館, 1971.
+(#) 坂井　修一『[論理回路基礎](https://ocw.u-tokyo.ac.jp/course_11273/)』東京大学OCW, 2005
+(#) 細井勉『[情報科学のための論理数学](https://www.nippyo.co.jp/shop/book/1291.html)』
+(#) 宮崎佳典 新谷誠 中谷広正『[理工系のための離散数学](http://www.tokyo-tosho.co.jp/books/ISBN978-4-489-02152-7.html)』
+(#) 湯田春雄 堀端孝俊『[しっかり学べる 基礎ディジタル回路](https://www.morikita.co.jp/books/book/1864)』
+(#) Posthoff, Christian., Steinbach, Bernd., *[Logic Functions and Equations](https://www.springer.com/jp/book/9783030024192)*
 
 ## 講師について
 
