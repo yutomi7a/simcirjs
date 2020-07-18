@@ -33,11 +33,10 @@ date: 2020/6/6
         - 可能ならpdfファイルのまま書き込み後提出してもOK
     - 6月3日:
   1. 次の論理関数をカルノー図を用いて簡単化し最小積和形を求めよ.
-    $$
-    \begin{align}F_1 &= A\,B+A\,C+A\,\overline{B}\,C+\overline{A}\,B\,\overline{C}\\
-    F_2 &= W\,X\,Y\,Z+\overline{W}\,\overline{X}+X\,\overline{Y}\,Z\end{align}
-    $$
-
+      $$\begin{aligned}
+      F_1 &= A\,B+A\,C+A\,\overline{B}\,C+\overline{A}\,B\,\overline{C}\\
+      F_2 &= W\,X\,Y\,Z+\overline{W}\,\overline{X}+X\,\overline{Y}\,Z
+      \end{aligned}$$
   2. $F_2$の解答をAND, OR, NOT素子だけを使って実現してみよ(3入力のAND,OR素子を使っても構わない).
      - 前回と同様メールまたはLINEアカウントから画像またはpdfファイルを提出すること.
      - 締め切り: 6/15 23:59まで(以降の提出は減点)

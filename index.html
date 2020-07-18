@@ -1,11 +1,257 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
-<head>
-  <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <meta name="author" content="富田 裕" />
-  <title>九テク論理回路サポートサイト</title>
+<!DOCTYPE html><html><head>
+      <title>&#x4E5D;&#x30C6;&#x30AF;&#x8AD6;&#x7406;&#x56DE;&#x8DEF;&#x30B5;&#x30DD;&#x30FC;&#x30C8;&#x30B5;&#x30A4;&#x30C8;</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({"extensions":["tex2jax.js"],"jax":["input/TeX","output/HTML-CSS"],"messageStyle":"none","tex2jax":{"processEnvironments":false,"processEscapes":true,"inlineMath":[["$","$"],["\\(","\\)"]],"displayMath":[["$$","$$"],["\\[","\\]"]]},"TeX":{"extensions":["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js"]},"HTML-CSS":{"availableFonts":["TeX"]}});
+        </script>
+        <script type="text/javascript" async src="file:////Users/yutom/.vscode-oss/extensions/shd101wyy.markdown-preview-enhanced-0.5.12/node_modules/@shd101wyy/mume/dependencies/mathjax/MathJax.js" charset="UTF-8"></script>
+        
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      /* http://prismjs.com/download.html?themes=prism&languages=markup+css+clike+javascript+abap+actionscript+ada+apacheconf+apl+applescript+asciidoc+aspnet+autoit+autohotkey+bash+basic+batch+c+brainfuck+bro+bison+csharp+cpp+coffeescript+ruby+css-extras+d+dart+django+diff+docker+eiffel+elixir+erlang+fsharp+fortran+gherkin+git+glsl+go+graphql+groovy+haml+handlebars+haskell+haxe+http+icon+inform7+ini+j+jade+java+jolie+json+julia+keyman+kotlin+latex+less+livescript+lolcode+lua+makefile+markdown+matlab+mel+mizar+monkey+nasm+nginx+nim+nix+nsis+objectivec+ocaml+oz+parigp+parser+pascal+perl+php+php-extras+powershell+processing+prolog+properties+protobuf+puppet+pure+python+q+qore+r+jsx+reason+rest+rip+roboconf+crystal+rust+sas+sass+scss+scala+scheme+smalltalk+smarty+sql+stylus+swift+tcl+textile+twig+typescript+vbnet+verilog+vhdl+vim+wiki+xojo+yaml */
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: black;
+	background: none;
+	text-shadow: 0 1px white;
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+	text-shadow: none;
+	background: #b3d4fc;
+}
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+	text-shadow: none;
+	background: #b3d4fc;
+}
+
+@media print {
+	code[class*="language-"],
+	pre[class*="language-"] {
+		text-shadow: none;
+	}
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #f5f2f0;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: slategray;
+}
+
+.token.punctuation {
+	color: #999;
+}
+
+.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #905;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #690;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+	color: #a67f59;
+	background: hsla(0, 0%, 100%, .5);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+	color: #07a;
+}
+
+.token.function {
+	color: #DD4A68;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+	color: #e90;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+
+/* highlight */
+pre[data-line] {
+	position: relative;
+	padding: 1em 0 1em 3em;
+  }
+  pre[data-line] .line-highlight-wrapper {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: transparent;
+	display: block;
+	width: 100%;
+  }
+  
+  pre[data-line] .line-highlight {
+	position: absolute;
+	left: 0;
+	right: 0;
+	padding: inherit 0;
+	margin-top: 1em;
+	background: hsla(24, 20%, 50%,.08);
+	background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+	pointer-events: none;
+	line-height: inherit;
+	white-space: pre;
+  }
+  
+  pre[data-line] .line-highlight:before, 
+  pre[data-line] .line-highlight[data-end]:after {
+	content: attr(data-start);
+	position: absolute;
+	top: .4em;
+	left: .6em;
+	min-width: 1em;
+	padding: 0 .5em;
+	background-color: hsla(24, 20%, 50%,.4);
+	color: hsl(24, 20%, 95%);
+	font: bold 65%/1.5 sans-serif;
+	text-align: center;
+	vertical-align: .3em;
+	border-radius: 999px;
+	text-shadow: none;
+	box-shadow: 0 1px white;
+  }
+  
+  pre[data-line] .line-highlight[data-end]:after {
+	content: attr(data-end);
+	top: auto;
+	bottom: .4em;
+  }html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+.markdown-preview.markdown-preview {
+  counter-reset: cnt;
+}
+.markdown-preview.markdown-preview ol.example {
+  display: table;
+  margin: 0;
+  padding: 0 0 0 2em;
+  list-style-type: none;
+}
+.markdown-preview.markdown-preview ol.example > li {
+  list-style-type: decimal;
+  margin: 0em;
+  padding: 0em;
+  display: table-row;
+  list-style-position: outside;
+}
+.markdown-preview.markdown-preview ol.example > li:before {
+  counter-increment: cnt;
+  content: "(" counter(cnt) ")";
+  display: table-cell;
+  padding-right: 0.4em;
+  text-align: right;
+}
+.markdown-preview.markdown-preview ol.example > li:after {
+  content: "";
+  display: block;
+  margin-bottom: 1em;
+}
+.markdown-preview.markdown-preview ol.example > li:last-of-type:after {
+  margin-bottom: 0;
+}
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <meta name="author" content="&#x5BCC;&#x7530; &#x88D5;">
+  <title>&#x4E5D;&#x30C6;&#x30AF;&#x8AD6;&#x7406;&#x56DE;&#x8DEF;&#x30B5;&#x30DD;&#x30FC;&#x30C8;&#x30B5;&#x30A4;&#x30C8;</title>
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -14,106 +260,106 @@
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
   </style>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.js"></script>
-  <script>document.addEventListener("DOMContentLoaded", function () {
-   var mathElements = document.getElementsByClassName("math");
-   for (var i = 0; i < mathElements.length; i++) {
-    var texText = mathElements[i].firstChild;
-    if (mathElements[i].tagName == "SPAN") {
-     katex.render(texText.data, mathElements[i], {
-      displayMode: mathElements[i].classList.contains('display'),
-      throwOnError: false,
-      fleqn: false
-     });
-  }}});
-  </script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" type="text/javascript"></script>
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
-</head>
-<body>
+
 <header id="title-block-header">
-<h1 class="title">九テク論理回路サポートサイト</h1>
-<p class="author">富田 裕</p>
+<h1 class="title">&#x4E5D;&#x30C6;&#x30AF;&#x8AD6;&#x7406;&#x56DE;&#x8DEF;&#x30B5;&#x30DD;&#x30FC;&#x30C8;&#x30B5;&#x30A4;&#x30C8;</h1>
+<p class="author">&#x5BCC;&#x7530; &#x88D5;</p>
 <p class="date">2020/6/6</p>
 </header>
-<h2 id="はじめに">はじめに</h2>
-<p>2020年九州テクノカレッジ・ハイテク情報科向けの科目『論理回路』に関する資料等を提供するサイトです.</p>
-<h2 id="授業資料">授業資料</h2>
-<p>2/12の後半以降の資料のみ公開予定です.</p>
+<h2 id="&#x306F;&#x3058;&#x3081;&#x306B;">&#x306F;&#x3058;&#x3081;&#x306B;</h2>
+<p>2020&#x5E74;&#x4E5D;&#x5DDE;&#x30C6;&#x30AF;&#x30CE;&#x30AB;&#x30EC;&#x30C3;&#x30B8;&#x30FB;&#x30CF;&#x30A4;&#x30C6;&#x30AF;&#x60C5;&#x5831;&#x79D1;&#x5411;&#x3051;&#x306E;&#x79D1;&#x76EE;&#x300E;&#x8AD6;&#x7406;&#x56DE;&#x8DEF;&#x300F;&#x306B;&#x95A2;&#x3059;&#x308B;&#x8CC7;&#x6599;&#x7B49;&#x3092;&#x63D0;&#x4F9B;&#x3059;&#x308B;&#x30B5;&#x30A4;&#x30C8;&#x3067;&#x3059;.</p>
+<h2 id="&#x6388;&#x696D;&#x8CC7;&#x6599;">&#x6388;&#x696D;&#x8CC7;&#x6599;</h2>
+<p>2/12&#x306E;&#x5F8C;&#x534A;&#x4EE5;&#x964D;&#x306E;&#x8CC7;&#x6599;&#x306E;&#x307F;&#x516C;&#x958B;&#x4E88;&#x5B9A;&#x3067;&#x3059;.</p>
 <ul>
-<li>スライド
+<li>&#x30B9;&#x30E9;&#x30A4;&#x30C9;
 <ul>
-<li><a href="https://yutomi7a.github.io/simcirjs/self_dual_slides.html">補助スライド</a></li>
-<li><a href="https://www.dropbox.com/s/ytqq2k5z9hd8hz6/200212b.pdf">2月12日後半</a></li>
-<li><a href="https://www.dropbox.com/s/wlshuvalvedbh1g/200219a.pdf">2月19日前半</a></li>
-<li><a href="https://www.dropbox.com/s/hhxwycld0x0le4d/200219b.pdf">2月19日後半</a></li>
-<li><a href="https://www.dropbox.com/s/xhxd60qtwg6scqz/200226a.pdf">2月26日前半</a></li>
-<li><a href="https://www.dropbox.com/s/l8wjvgq8q0cp929/200226b.pdf">2月26日後半</a></li>
-<li><a href="https://www.dropbox.com/s/6pynw7l3zv57wuk/200318a.pdf">3月18日前半</a></li>
-<li><a href="https://www.dropbox.com/s/4zeuhecav2szhpg/200318b.pdf">3月18日後半</a></li>
-<li><a href="https://www.dropbox.com/s/dplk8qh541ehj2g/200325a.pdf">3月25日前半</a></li>
-<li><a href="https://www.dropbox.com/s/4bpfvpm9ouuyno5/200325b.pdf">3月25日後半</a></li>
-<li><a href="https://yutomi7a.github.io/simcirjs/200527a/#/">5月27日(6月1日)前半</a> <a href="https://www.dropbox.com/s/n4joa7jv2x5p580/200527a.pdf?dl=0">pdf版はこちら</a></li>
-<li><a href="https://yutomi7a.github.io/simcirjs/200527b/#/">5月27日(6月1日)後半</a> <a href="https://www.dropbox.com/s/lmg2ypsgxicsg2t/200527b.pdf?dl=0">pdf版はこちら</a></li>
-<li><a href="https://yutomi7a.github.io/simcirjs/200603_slides.html">6月3日</a></li>
+<li><a href="https://yutomi7a.github.io/simcirjs/self_dual_slides.html">&#x88DC;&#x52A9;&#x30B9;&#x30E9;&#x30A4;&#x30C9;</a></li>
+<li><a href="https://www.dropbox.com/s/ytqq2k5z9hd8hz6/200212b.pdf">2&#x6708;12&#x65E5;&#x5F8C;&#x534A;</a></li>
+<li><a href="https://www.dropbox.com/s/wlshuvalvedbh1g/200219a.pdf">2&#x6708;19&#x65E5;&#x524D;&#x534A;</a></li>
+<li><a href="https://www.dropbox.com/s/hhxwycld0x0le4d/200219b.pdf">2&#x6708;19&#x65E5;&#x5F8C;&#x534A;</a></li>
+<li><a href="https://www.dropbox.com/s/xhxd60qtwg6scqz/200226a.pdf">2&#x6708;26&#x65E5;&#x524D;&#x534A;</a></li>
+<li><a href="https://www.dropbox.com/s/l8wjvgq8q0cp929/200226b.pdf">2&#x6708;26&#x65E5;&#x5F8C;&#x534A;</a></li>
+<li><a href="https://www.dropbox.com/s/6pynw7l3zv57wuk/200318a.pdf">3&#x6708;18&#x65E5;&#x524D;&#x534A;</a></li>
+<li><a href="https://www.dropbox.com/s/4zeuhecav2szhpg/200318b.pdf">3&#x6708;18&#x65E5;&#x5F8C;&#x534A;</a></li>
+<li><a href="https://www.dropbox.com/s/dplk8qh541ehj2g/200325a.pdf">3&#x6708;25&#x65E5;&#x524D;&#x534A;</a></li>
+<li><a href="https://www.dropbox.com/s/4bpfvpm9ouuyno5/200325b.pdf">3&#x6708;25&#x65E5;&#x5F8C;&#x534A;</a></li>
+<li><a href="https://yutomi7a.github.io/simcirjs/200527a/#/">5&#x6708;27&#x65E5;(6&#x6708;1&#x65E5;)&#x524D;&#x534A;</a> <a href="https://www.dropbox.com/s/n4joa7jv2x5p580/200527a.pdf?dl=0">pdf&#x7248;&#x306F;&#x3053;&#x3061;&#x3089;</a></li>
+<li><a href="https://yutomi7a.github.io/simcirjs/200527b/#/">5&#x6708;27&#x65E5;(6&#x6708;1&#x65E5;)&#x5F8C;&#x534A;</a> <a href="https://www.dropbox.com/s/lmg2ypsgxicsg2t/200527b.pdf?dl=0">pdf&#x7248;&#x306F;&#x3053;&#x3061;&#x3089;</a></li>
+<li><a href="https://yutomi7a.github.io/simcirjs/200603_slides.html">6&#x6708;3&#x65E5;</a></li>
 </ul></li>
-<li>課題(メールなどで提出)
+<li>&#x8AB2;&#x984C;(&#x30E1;&#x30FC;&#x30EB;&#x306A;&#x3069;&#x3067;&#x63D0;&#x51FA;)
 <ul>
-<li><a href="https://www.dropbox.com/s/mjr5fztlr8dr4ci/200527qa.pdf?dl=0">5月27日(6月1日)</a>
+<li><a href="https://www.dropbox.com/s/mjr5fztlr8dr4ci/200527qa.pdf?dl=0">5&#x6708;27&#x65E5;(6&#x6708;1&#x65E5;)</a>
 <ul>
-<li>提出先: yutomi7a@じーめーる.com (じーめーるをgmailに書き換え) またはLINEアカウント</li>
-<li>解答した用紙はカメラやスキャナで撮影し, 画像ファイルにして提出してください
+<li>&#x63D0;&#x51FA;&#x5148;: yutomi7a@&#x3058;&#x30FC;&#x3081;&#x30FC;&#x308B;.com (&#x3058;&#x30FC;&#x3081;&#x30FC;&#x308B;&#x3092;gmail&#x306B;&#x66F8;&#x304D;&#x63DB;&#x3048;) &#x307E;&#x305F;&#x306F;LINE&#x30A2;&#x30AB;&#x30A6;&#x30F3;&#x30C8;</li>
+<li>&#x89E3;&#x7B54;&#x3057;&#x305F;&#x7528;&#x7D19;&#x306F;&#x30AB;&#x30E1;&#x30E9;&#x3084;&#x30B9;&#x30AD;&#x30E3;&#x30CA;&#x3067;&#x64AE;&#x5F71;&#x3057;, &#x753B;&#x50CF;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x306B;&#x3057;&#x3066;&#x63D0;&#x51FA;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;
 <ul>
-<li>ノートやレポート用紙に書き写してもOK</li>
-<li>可能ならpdfファイルのまま書き込み後提出してもOK</li>
+<li>&#x30CE;&#x30FC;&#x30C8;&#x3084;&#x30EC;&#x30DD;&#x30FC;&#x30C8;&#x7528;&#x7D19;&#x306B;&#x66F8;&#x304D;&#x5199;&#x3057;&#x3066;&#x3082;OK</li>
+<li>&#x53EF;&#x80FD;&#x306A;&#x3089;pdf&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x306E;&#x307E;&#x307E;&#x66F8;&#x304D;&#x8FBC;&#x307F;&#x5F8C;&#x63D0;&#x51FA;&#x3057;&#x3066;&#x3082;OK</li>
 </ul></li>
 </ul></li>
-<li>6月3日:</li>
+<li>6&#x6708;3&#x65E5;:</li>
 </ul>
 <ol type="1">
-<li><p>次の論理関数をカルノー図を用いて簡単化し最小積和形を求めよ. <span class="math display">
-  \begin{align}F_1 &amp;= A\,B+A\,C+A\,\overline{B}\,C+\overline{A}\,B\,\overline{C}\\
-  F_2 &amp;= W\,X\,Y\,Z+\overline{W}\,\overline{X}+X\,\overline{Y}\,Z\end{align}
-  </span></p></li>
-<li><p><span class="math inline">F_2</span>の解答をAND, OR, NOT素子だけを使って実現してみよ(3入力のAND,OR素子を使っても構わない).</p>
+<li>&#x6B21;&#x306E;&#x8AD6;&#x7406;&#x95A2;&#x6570;&#x3092;&#x30AB;&#x30EB;&#x30CE;&#x30FC;&#x56F3;&#x3092;&#x7528;&#x3044;&#x3066;&#x7C21;&#x5358;&#x5316;&#x3057;&#x6700;&#x5C0F;&#x7A4D;&#x548C;&#x5F62;&#x3092;&#x6C42;&#x3081;&#x3088;. <span class="math display">\[\begin{aligned}
+ F_1 &amp;= A\,B+A\,C+A\,\overline{B}\,C+\overline{A}\,B\,\overline{C}\\
+ F_2 &amp;= W\,X\,Y\,Z+\overline{W}\,\overline{X}+X\,\overline{Y}\,Z
+ \end{aligned}\]</span></li>
+<li><span class="math inline">\(F_2\)</span>&#x306E;&#x89E3;&#x7B54;&#x3092;AND, OR, NOT&#x7D20;&#x5B50;&#x3060;&#x3051;&#x3092;&#x4F7F;&#x3063;&#x3066;&#x5B9F;&#x73FE;&#x3057;&#x3066;&#x307F;&#x3088;(3&#x5165;&#x529B;&#x306E;AND,OR&#x7D20;&#x5B50;&#x3092;&#x4F7F;&#x3063;&#x3066;&#x3082;&#x69CB;&#x308F;&#x306A;&#x3044;).
 <ul>
-<li>前回と同様メールまたはLINEアカウントから画像またはpdfファイルを提出すること.</li>
-<li>締め切り: 6/15 23:59まで(以降の提出は減点)</li>
+<li>&#x524D;&#x56DE;&#x3068;&#x540C;&#x69D8;&#x30E1;&#x30FC;&#x30EB;&#x307E;&#x305F;&#x306F;LINE&#x30A2;&#x30AB;&#x30A6;&#x30F3;&#x30C8;&#x304B;&#x3089;&#x753B;&#x50CF;&#x307E;&#x305F;&#x306F;pdf&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3092;&#x63D0;&#x51FA;&#x3059;&#x308B;&#x3053;&#x3068;.</li>
+<li>&#x7DE0;&#x3081;&#x5207;&#x308A;: 6/15 23:59&#x307E;&#x3067;(&#x4EE5;&#x964D;&#x306E;&#x63D0;&#x51FA;&#x306F;&#x6E1B;&#x70B9;)</li>
 </ul></li>
 </ol></li>
 </ul>
-<h3 id="javascript教材">JavaScript教材</h3>
+<h3 id="javascript&#x6559;&#x6750;">JavaScript&#x6559;&#x6750;</h3>
 <ul>
-<li><a href="http://home.a00.itscom.net/hatada/_toc/dc.html#dc2sim">デジタル回路[JavaScript版]</a>
+<li><a href="http://home.a00.itscom.net/hatada/_toc/dc.html#dc2sim">&#x30C7;&#x30B8;&#x30BF;&#x30EB;&#x56DE;&#x8DEF;[JavaScript&#x7248;]</a>
 <ul>
-<li>デジタル回路の基礎を学べるサイト.</li>
-<li>残念ながらJK-FFやD-FFなどがうまく動いていません(2020年5月現在).</li>
+<li>&#x30C7;&#x30B8;&#x30BF;&#x30EB;&#x56DE;&#x8DEF;&#x306E;&#x57FA;&#x790E;&#x3092;&#x5B66;&#x3079;&#x308B;&#x30B5;&#x30A4;&#x30C8;.</li>
+<li>&#x6B8B;&#x5FF5;&#x306A;&#x304C;&#x3089;JK-FF&#x3084;D-FF&#x306A;&#x3069;&#x304C;&#x3046;&#x307E;&#x304F;&#x52D5;&#x3044;&#x3066;&#x3044;&#x307E;&#x305B;&#x3093;(2020&#x5E74;5&#x6708;&#x73FE;&#x5728;).</li>
 </ul></li>
 <li><a href="sandbox.html">SimcirJS(forked)</a>
 <ul>
-<li>自分で回路を組んで動作を確認できるJavaScriptプログラム.</li>
-<li>こちらでforkし, OSC(クロックパルスを入力するデバイス)の周波数を見やすいように調整しました.</li>
-<li>残念ながら多くのスマートフォンでは操作に制限があります.</li>
+<li>&#x81EA;&#x5206;&#x3067;&#x56DE;&#x8DEF;&#x3092;&#x7D44;&#x3093;&#x3067;&#x52D5;&#x4F5C;&#x3092;&#x78BA;&#x8A8D;&#x3067;&#x304D;&#x308B;JavaScript&#x30D7;&#x30ED;&#x30B0;&#x30E9;&#x30E0;.</li>
+<li>&#x3053;&#x3061;&#x3089;&#x3067;fork&#x3057;, OSC(&#x30AF;&#x30ED;&#x30C3;&#x30AF;&#x30D1;&#x30EB;&#x30B9;&#x3092;&#x5165;&#x529B;&#x3059;&#x308B;&#x30C7;&#x30D0;&#x30A4;&#x30B9;)&#x306E;&#x5468;&#x6CE2;&#x6570;&#x3092;&#x898B;&#x3084;&#x3059;&#x3044;&#x3088;&#x3046;&#x306B;&#x8ABF;&#x6574;&#x3057;&#x307E;&#x3057;&#x305F;.</li>
+<li>&#x6B8B;&#x5FF5;&#x306A;&#x304C;&#x3089;&#x591A;&#x304F;&#x306E;&#x30B9;&#x30DE;&#x30FC;&#x30C8;&#x30D5;&#x30A9;&#x30F3;&#x3067;&#x306F;&#x64CD;&#x4F5C;&#x306B;&#x5236;&#x9650;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;.</li>
 </ul></li>
 </ul>
-<h3 id="参考文献五十音順">参考文献(五十音順)</h3>
-<p>おすすめの教科書ではありませんが, 特に参考にしているものだけを取り上げます. また，無料で閲覧可能なWeb資料もあります.</p>
+<h3 id="&#x53C2;&#x8003;&#x6587;&#x732E;&#x4E94;&#x5341;&#x97F3;&#x9806;">&#x53C2;&#x8003;&#x6587;&#x732E;(&#x4E94;&#x5341;&#x97F3;&#x9806;)</h3>
+<p>&#x304A;&#x3059;&#x3059;&#x3081;&#x306E;&#x6559;&#x79D1;&#x66F8;&#x3067;&#x306F;&#x3042;&#x308A;&#x307E;&#x305B;&#x3093;&#x304C;, &#x7279;&#x306B;&#x53C2;&#x8003;&#x306B;&#x3057;&#x3066;&#x3044;&#x308B;&#x3082;&#x306E;&#x3060;&#x3051;&#x3092;&#x53D6;&#x308A;&#x4E0A;&#x3052;&#x307E;&#x3059;. &#x307E;&#x305F;&#xFF0C;&#x7121;&#x6599;&#x3067;&#x95B2;&#x89A7;&#x53EF;&#x80FD;&#x306A;Web&#x8CC7;&#x6599;&#x3082;&#x3042;&#x308A;&#x307E;&#x3059;.</p>
 <ol>
-<li>岩出秀平『<a href="http://muisuri.my.coocan.jp/electro.html">明快解説・箇条書式　ディジタル回路</a>』</li>
-<li>グッドステイン, R.L.『ブール代数』赤攝也訳, 培風館, 1971.</li>
-<li>坂井　修一『<a href="https://ocw.u-tokyo.ac.jp/course_11273/">論理回路基礎</a>』東京大学OCW, 2005</li>
-<li>細井勉『<a href="https://www.nippyo.co.jp/shop/book/1291.html">情報科学のための論理数学</a>』</li>
-<li>宮崎佳典 新谷誠 中谷広正『<a href="http://www.tokyo-tosho.co.jp/books/ISBN978-4-489-02152-7.html">理工系のための離散数学</a>』</li>
-<li>湯田春雄 堀端孝俊『<a href="https://www.morikita.co.jp/books/book/1864">しっかり学べる 基礎ディジタル回路</a>』</li>
+<li>&#x5CA9;&#x51FA;&#x79C0;&#x5E73;&#x300E;<a href="http://muisuri.my.coocan.jp/electro.html">&#x660E;&#x5FEB;&#x89E3;&#x8AAC;&#x30FB;&#x7B87;&#x6761;&#x66F8;&#x5F0F;&#x3000;&#x30C7;&#x30A3;&#x30B8;&#x30BF;&#x30EB;&#x56DE;&#x8DEF;</a>&#x300F;</li>
+<li>&#x30B0;&#x30C3;&#x30C9;&#x30B9;&#x30C6;&#x30A4;&#x30F3;, R.L.&#x300E;&#x30D6;&#x30FC;&#x30EB;&#x4EE3;&#x6570;&#x300F;&#x8D64;&#x651D;&#x4E5F;&#x8A33;, &#x57F9;&#x98A8;&#x9928;, 1971.</li>
+<li>&#x5742;&#x4E95;&#x3000;&#x4FEE;&#x4E00;&#x300E;<a href="https://ocw.u-tokyo.ac.jp/course_11273/">&#x8AD6;&#x7406;&#x56DE;&#x8DEF;&#x57FA;&#x790E;</a>&#x300F;&#x6771;&#x4EAC;&#x5927;&#x5B66;OCW, 2005</li>
+<li>&#x7D30;&#x4E95;&#x52C9;&#x300E;<a href="https://www.nippyo.co.jp/shop/book/1291.html">&#x60C5;&#x5831;&#x79D1;&#x5B66;&#x306E;&#x305F;&#x3081;&#x306E;&#x8AD6;&#x7406;&#x6570;&#x5B66;</a>&#x300F;</li>
+<li>&#x5BAE;&#x5D0E;&#x4F73;&#x5178; &#x65B0;&#x8C37;&#x8AA0; &#x4E2D;&#x8C37;&#x5E83;&#x6B63;&#x300E;<a href="http://www.tokyo-tosho.co.jp/books/ISBN978-4-489-02152-7.html">&#x7406;&#x5DE5;&#x7CFB;&#x306E;&#x305F;&#x3081;&#x306E;&#x96E2;&#x6563;&#x6570;&#x5B66;</a>&#x300F;</li>
+<li>&#x6E6F;&#x7530;&#x6625;&#x96C4; &#x5800;&#x7AEF;&#x5B5D;&#x4FCA;&#x300E;<a href="https://www.morikita.co.jp/books/book/1864">&#x3057;&#x3063;&#x304B;&#x308A;&#x5B66;&#x3079;&#x308B; &#x57FA;&#x790E;&#x30C7;&#x30A3;&#x30B8;&#x30BF;&#x30EB;&#x56DE;&#x8DEF;</a>&#x300F;</li>
 <li>Posthoff, Christian., Steinbach, Bernd., <em><a href="https://www.springer.com/jp/book/9783030024192">Logic Functions and Equations</a></em></li>
 </ol>
-<h2 id="講師について">講師について</h2>
-<p>普段は回路と無縁な研究をしています.</p>
+<h2 id="&#x8B1B;&#x5E2B;&#x306B;&#x3064;&#x3044;&#x3066;">&#x8B1B;&#x5E2B;&#x306B;&#x3064;&#x3044;&#x3066;</h2>
+<p>&#x666E;&#x6BB5;&#x306F;&#x56DE;&#x8DEF;&#x3068;&#x7121;&#x7E01;&#x306A;&#x7814;&#x7A76;&#x3092;&#x3057;&#x3066;&#x3044;&#x307E;&#x3059;.</p>
 <p><a href="https://www.researchgate.net/profile/Yu_Tomita3">Yu Tomita on ResearchGate</a></p>
 <p><a href="https://researchmap.jp/yu_tomita">researchmap</a></p>
 <p>Copyright (c) 2020 Yu Tomita</p>
 <p>Licensed under the MIT license: <a href="http://www.opensource.org/licenses/mit-license.php">http://www.opensource.org/licenses/mit-license.php</a></p>
-</body>
-</html>
+
+
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
